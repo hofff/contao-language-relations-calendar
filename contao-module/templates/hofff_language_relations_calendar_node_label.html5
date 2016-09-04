@@ -1,0 +1,4 @@
+<span class="hofff-greyed">[<?= $this->language; ?>]</span>
+<?php if($this->type == 'entry'): ?> <?= date(\Date::getNumericDatimFormat(), $this->date) ?><?php endif;?>
+ <?= $this->title; ?>
+<?php if($this->type == 'entry'): ?> (ID <?= $this->id; ?>)<?php endif; ?>

@@ -1,0 +1,40 @@
+{
+	"name": "hofff/contao-language-relations-calendar",
+	"description": "Maintaining relations between translated calendar events.",
+	"keywords": [ "utility", "translation", "calendar", "contao" ],
+	"type": "contao-module",
+	"license": "LGPL-3.0+",
+	"homepage": "http://hofff.com/",
+	"authors": [
+		{
+			"name": "Oliver Hoff",
+			"email": "oliver@hofff.com",
+			"homepage": "http://hofff.com/",
+			"role": "Developer"
+		}
+	],
+	"config": {
+		"preferred-install": "dist"
+	},
+	"require": {
+		"php": "^5.5 || ^7.0",
+		"contao/core": "^3.5",
+		"contao-community-alliance/composer-plugin": "^2.0",
+		"hofff/contao-language-relations": "^2.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Hofff\\Contao\\LanguageRelations\\Calendar\\": "src/"
+		}
+	},
+	"extra": {
+		"contao": {
+			"sources": {
+				"contao-module": "system/modules/hofff_language_relations_calendar"
+			},
+			"runonce": [
+				"runonce/dropViews.php"
+			]
+		}
+	}
+}
